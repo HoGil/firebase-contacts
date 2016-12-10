@@ -8,13 +8,15 @@ public class Person {
     private String id;
     private String name;
     private String age;
+    private boolean single;
 
     public Person() {}
 
-    public Person(String id, String name, String age) {
+    public Person(String id, String name, String age, boolean single) {
         this.id = id;
         this.name = name;
         this.age = age;
+        this.single = single;
     }
 
     public String getId() {
@@ -39,5 +41,13 @@ public class Person {
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    public boolean isSingle() {
+        return single;
+    }
+
+    public void setSingle(boolean single) {
+        this.single = single;
     }
 }
