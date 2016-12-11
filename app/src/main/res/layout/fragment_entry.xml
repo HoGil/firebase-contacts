@@ -38,4 +38,14 @@
         android:layout_below="@id/edit_age"
         />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add User"
+        android:id="@+id/button_add"
+        android:layout_alignBottom="@+id/edit_status"
+        android:layout_toRightOf="@+id/edit_age"
+        android:layout_toEndOf="@+id/edit_age"
+        android:layout_marginLeft="20dp" />
+
 </RelativeLayout>
