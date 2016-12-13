@@ -2,17 +2,22 @@ package com.example.gilho.buildthree;
 
 import android.provider.ContactsContract;
 
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 /**
  * Created by gilho on 11/12/16.
  */
 public class Backend {
 
-    FirebaseDatabase database;
-    DatabaseReference userRef;
+    private FirebaseDatabase database;
+    private DatabaseReference userRef;
     public static int userCounter = 1;
+    private ArrayList<Person> userList;
+    private DataSnapshot snapshot;
 
     public Backend() {
 
@@ -30,6 +35,13 @@ public class Backend {
         userRef.child(Integer.toString(userCounter)).setValue(user);
         userCounter++;
     }
+
+    public DatabaseReference getDatabaseReference() {
+        return userRef;
+    }
+
+
+
 
 
 }
