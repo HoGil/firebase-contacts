@@ -7,14 +7,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by gilho on 27/11/16.
@@ -32,7 +29,7 @@ public class ListFragment extends Fragment {
     private Backend controller;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mFirebaseDatabaseReference;
-    private FirebaseRecyclerAdapter<Person, ViewHolder> mFirebaseAdapter;
+    private FirebaseRecyclerAdapter<Contact, ViewHolder> mFirebaseAdapter;
 
     // view holder
     private static class ViewHolder extends RecyclerView.ViewHolder {
@@ -62,9 +59,9 @@ public class ListFragment extends Fragment {
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
         controller = new Backend();
         mFirebaseDatabaseReference = controller.getDatabaseReference();
-        mFirebaseAdapter = new FirebaseRecyclerAdapter<Person, ViewHolder>(Person.class, R.layout.individual_view, ViewHolder.class, mFirebaseDatabaseReference) {
+        mFirebaseAdapter = new FirebaseRecyclerAdapter<Contact, ViewHolder>(Contact.class, R.layout.individual_view, ViewHolder.class, mFirebaseDatabaseReference) {
             @Override
-            protected void populateViewHolder(ViewHolder viewHolder, Person model, int position) {
+            protected void populateViewHolder(ViewHolder viewHolder, Contact model, int position) {
 
                 viewHolder.mName.setText("Name: " + model.getName());
                 viewHolder.mAge.setText("Age: " + model.getAge());

@@ -3,16 +3,16 @@ package com.example.gilho.buildthree;
 /**
  * Created by gilho on 24/11/16.
  */
-public class Person {
+public class Contact {
 
     private int id;
     private String name;
     private String age;
     private boolean single;
 
-    public Person() {}
+    public Contact() {}
 
-    public Person(int id, String name, String age, boolean single) {
+    public Contact(int id, String name, String age, boolean single) {
         this.id = id;
         this.name = name;
         this.age = age;

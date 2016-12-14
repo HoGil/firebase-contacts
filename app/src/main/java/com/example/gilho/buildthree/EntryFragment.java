@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import com.example.gilho.buildthree.MainActivity;
 
 /**
  * Created by gilho on 27/11/16.
@@ -48,7 +47,7 @@ public class EntryFragment extends Fragment {
                     sStatus = false;
                 }
 
-                connection.writeNewUser(mName.getText().toString(), mAge.getText().toString(), sStatus);
+                connection.writeNewContact(mName.getText().toString(), mAge.getText().toString(), sStatus);
             }
         });
 
