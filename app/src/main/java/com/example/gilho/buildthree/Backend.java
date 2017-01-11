@@ -1,5 +1,7 @@
 package com.example.gilho.buildthree;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -17,11 +19,19 @@ public class Backend {
     private ArrayList<Contact> userList;
     private DataSnapshot snapshot;
 
+    private FirebaseUser mUser;
+    private String userId;
+
+
     public Backend() {
 
-        // get location referencesr
+        // get unique id for each user
+        mUser = FirebaseAuth.getInstance().getCurrentUser();
+        userId = mUser.getUid();
+
+        // get location references
         database = FirebaseDatabase.getInstance();
-        userRef = database.getReference("contacts");
+        userRef = database.getReference(userId);
 
     }
 
