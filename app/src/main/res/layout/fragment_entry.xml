@@ -41,11 +41,21 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add User"
+        android:text="Add Contact"
         android:id="@+id/button_add"
         android:layout_alignBottom="@+id/edit_status"
         android:layout_toRightOf="@+id/edit_age"
         android:layout_toEndOf="@+id/edit_age"
         android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="User Logged Out"
+        android:id="@+id/frag_userdisplay"
+        android:layout_below="@+id/edit_name"
+        android:layout_alignRight="@+id/button_add"
+        android:layout_alignEnd="@+id/button_add" />
 
 </RelativeLayout>

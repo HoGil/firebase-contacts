@@ -7,6 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 /**
  * Created by gilho on 27/11/16.
@@ -18,8 +22,10 @@ public class EntryFragment extends Fragment {
     private EditText mStatus;
     private Button mButton;
     private Backend connection;
+    private TextView mUserDisplay;
     private boolean sStatus;
-
+    protected FirebaseAuth mAuth;
+    protected FirebaseAuth.AuthStateListener mAuthListener;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -30,6 +36,15 @@ public class EntryFragment extends Fragment {
         mAge = (EditText)v.findViewById(R.id.edit_age);
         mStatus = (EditText)v.findViewById(R.id.edit_status);
         mButton = (Button)v.findViewById(R.id.button_add);
+        mUserDisplay = (TextView)v.findViewById(R.id.frag_userdisplay);
+
+        // display user name
+        mAuth = FirebaseAuth.getInstance();
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        mUserDisplay.setText(user.getEmail());
+
+
+
 
         // open connection with firebase
         connection = new Backend();
