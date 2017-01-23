@@ -10,13 +10,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="personal.development.gilho.buildthree.MainActivity">
         </activity>
-        <activity android:name=".Authenticate.Login">
+        <activity android:name="personal.development.gilho.buildthree.Authenticate.Login">
         </activity>
-        <activity android:name=".Authenticate.Register">
+        <activity android:name="personal.development.gilho.buildthree.Authenticate.Register">
         </activity>
-        <activity android:name=".Gate">
+        <activity android:name="personal.development.gilho.buildthree.Gate">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

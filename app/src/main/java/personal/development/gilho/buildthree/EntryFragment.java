@@ -1,4 +1,4 @@
-package com.example.gilho.buildthree;
+package personal.development.gilho.buildthree;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -29,14 +29,14 @@ public class EntryFragment extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_entry, container, false);
+        View v = inflater.inflate(personal.example.gilho.buildthree.R.layout.fragment_entry, container, false);
 
         // inflate the widgets
-        mName = (EditText)v.findViewById(R.id.edit_name);
-        mAge = (EditText)v.findViewById(R.id.edit_age);
-        mStatus = (EditText)v.findViewById(R.id.edit_status);
-        mButton = (Button)v.findViewById(R.id.button_add);
-        mUserDisplay = (TextView)v.findViewById(R.id.frag_userdisplay);
+        mName = (EditText)v.findViewById(personal.example.gilho.buildthree.R.id.edit_name);
+        mAge = (EditText)v.findViewById(personal.example.gilho.buildthree.R.id.edit_age);
+        mStatus = (EditText)v.findViewById(personal.example.gilho.buildthree.R.id.edit_status);
+        mButton = (Button)v.findViewById(personal.example.gilho.buildthree.R.id.button_add);
+        mUserDisplay = (TextView)v.findViewById(personal.example.gilho.buildthree.R.id.frag_userdisplay);
 
         // display user name
         mAuth = FirebaseAuth.getInstance();

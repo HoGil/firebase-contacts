@@ -1,4 +1,4 @@
-package com.example.gilho.buildthree;
+package personal.development.gilho.buildthree;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -40,26 +40,26 @@ public class ListFragment extends Fragment {
 
         public ViewHolder(View v) {
             super(v);
-            mName = (TextView)itemView.findViewById(R.id.view_name);
-            mAge = (TextView)itemView.findViewById(R.id.view_age);
-            mStatus = (TextView)itemView.findViewById(R.id.view_status);
+            mName = (TextView)itemView.findViewById(personal.example.gilho.buildthree.R.id.view_name);
+            mAge = (TextView)itemView.findViewById(personal.example.gilho.buildthree.R.id.view_age);
+            mStatus = (TextView)itemView.findViewById(personal.example.gilho.buildthree.R.id.view_status);
         }
 
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_list, container, false);
-        mText = (TextView)v.findViewById(R.id.test);
+        View v = inflater.inflate(personal.example.gilho.buildthree.R.layout.fragment_list, container, false);
+        mText = (TextView)v.findViewById(personal.example.gilho.buildthree.R.id.test);
 
         // recyclerview stuff
-        mRecyclerView = (RecyclerView)v.findViewById(R.id.list_recycler);
+        mRecyclerView = (RecyclerView)v.findViewById(personal.example.gilho.buildthree.R.id.list_recycler);
         mLinearLayoutManager = new LinearLayoutManager(getActivity());
         mLinearLayoutManager.setStackFromEnd(false);
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
         controller = new Backend();
         mFirebaseDatabaseReference = controller.getDatabaseReference();
-        mFirebaseAdapter = new FirebaseRecyclerAdapter<Contact, ViewHolder>(Contact.class, R.layout.individual_view, ViewHolder.class, mFirebaseDatabaseReference) {
+        mFirebaseAdapter = new FirebaseRecyclerAdapter<Contact, ViewHolder>(Contact.class, personal.example.gilho.buildthree.R.layout.individual_view, ViewHolder.class, mFirebaseDatabaseReference) {
             @Override
             protected void populateViewHolder(ViewHolder viewHolder, Contact model, int position) {
 
