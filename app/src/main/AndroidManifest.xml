@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gilho.buildthree">
+    package="personal.development.gilho.buildthree">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,13 +10,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="personal.development.gilho.buildthree.MainActivity">
+        <activity android:name=".MainActivity">
         </activity>
-        <activity android:name="personal.development.gilho.buildthree.Authenticate.Login">
+        <activity android:name=".Authenticate.Login">
         </activity>
-        <activity android:name="personal.development.gilho.buildthree.Authenticate.Register">
+        <activity android:name=".Authenticate.Register">
         </activity>
-        <activity android:name="personal.development.gilho.buildthree.Gate">
+        <activity android:name=".Gate">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

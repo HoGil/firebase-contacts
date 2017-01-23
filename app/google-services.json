@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1050788417917:android:f92fa1879509af1d",
         "android_client_info": {
-          "package_name": "com.example.gilho.buildthree"
+          "package_name": "personal.development.gilho.buildthree"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "1050788417917-j1n7p3eug9eanv0m39pdqe35tovl6fin.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.gilho.buildthree",
+            "package_name": "personal.development.gilho.buildthree",
             "certificate_hash": "E3F3FBFB9351590BD93CC196BB4DCF796A7C22AE"
           }
         },
