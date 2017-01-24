@@ -32,7 +32,7 @@ public class ListFragment extends Fragment {
     private FirebaseRecyclerAdapter<Contact, ViewHolder> mFirebaseAdapter;
 
     // view holder
-    private static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView mName;
         private TextView mAge;
@@ -40,9 +40,9 @@ public class ListFragment extends Fragment {
 
         public ViewHolder(View v) {
             super(v);
-            mName = (TextView)itemView.findViewById(personal.development.gilho.buildthree.R.id.view_name);
-            mAge = (TextView)itemView.findViewById(personal.development.gilho.buildthree.R.id.view_age);
-            mStatus = (TextView)itemView.findViewById(personal.development.gilho.buildthree.R.id.view_status);
+            mName = (TextView)itemView.findViewById(R.id.view_name);
+            mAge = (TextView)itemView.findViewById(R.id.view_age);
+            mStatus = (TextView)itemView.findViewById(R.id.view_status);
         }
 
     }
